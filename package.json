@@ -1,9 +1,5 @@
 {
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "prisma": {
     "schema": "packages/database/prisma/schema.prisma",
     "seed": "tsx packages/database/src/seed.ts"
@@ -19,7 +15,7 @@
     "lint": "turbo run lint"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
+    "@repo/eslint-config": "workspace:*",
     "prettier": "^3.2.5",
     "prisma": "5.10.2",
     "tsx": "^4.7.1",
@@ -28,9 +24,9 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@1.22.19",
   "name": "with-prisma",
   "dependencies": {
     "@prisma/client": "5.10.2"
-  }
+  },
+  "packageManager": "pnpm@9.2.0"
 }
